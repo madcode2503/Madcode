@@ -36,7 +36,7 @@ public:
           getline(cin, fl.flnum);
           cout << "Input the destination: ";
           getline(cin, fl.des);
-          cout << "Input air manufacturer: ";
+          cout << "Input the airline: ";
           getline(cin, fl.airman);
           cout << "Input the destination country: ";
           getline(cin, fl.couname);
