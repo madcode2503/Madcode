@@ -7,11 +7,11 @@ public:
     Flight_List() : fls(0) {}
     int naf;
 
-    void CreateList(Flight_List &fll) // Input the information of the flights
+    void CreateList(Flight_List &fll) 
     {
         do
         {
-            cout << "Input the number of flights: ";
+            cout << "Nhap so hieu chuyen bay: ";
             cin >> fll.fls;
             if (fll.fls <= 0)
             {
@@ -22,11 +22,11 @@ public:
         F.resize(fll.fls);
         for (int i = 0; i < F.size(); i++)
         {
-            cout << "Input the information of the flight: " << i + 1 << endl;
+            cout << "Nhap thong tin chuyen bay: " << i + 1 << endl;
             F[i].Creatfl(F[i]);
         }
     }
-    void PrintList(Flight_List fll) // Print
+    void PrintList(Flight_List fll)
     {
         for (int i = 0; i < F.size(); i++)
         {
@@ -35,8 +35,9 @@ public:
             cout << endl;
         }
     }
-    void Sort(Flight_List &fll) // Sort the flight list
-    {
+    void Sort(Flight_List &fll) 
+    {   
+        
         for (int i = 0; i < F.size() - 1; i++)
         {
             int temp_index = i;
@@ -54,7 +55,7 @@ public:
     void add(Flight_List &fll) // Add a new flight to the list
     {
         int n;
-        cout << "Input the number of flights that you want to add: ";
+        cout << "Nhap so chuyen bay hom nay: ";
         cin >> n;
 
         int currentSize = F.size();
@@ -62,12 +63,12 @@ public:
 
         for (int i = currentSize; i < currentSize + n; i++)
         {
-            cout << "Add the flight " << i << endl;
+            cout << "Them chuyen bay " << i << endl;
             F[i].Creatfl(F[i]);
             fll.naf++;
         }
     }
-    void FaD(Flight_List &fll, string z) // Remove a flight
+    void FaD(Flight_List &fll, string z)
     {
         for (auto it = fll.F.begin(); it != fll.F.end();)
         {
