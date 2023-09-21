@@ -23,7 +23,7 @@ public:
           do
           {
 
-               cout << "Input the expected time: ";
+               cout << "Nhap thoi gian : ";
                cin >> fltime;
 
                if (fl.fltime <= 0)
@@ -31,14 +31,14 @@ public:
                     cout << "Invalid!\n";
                }
           } while (fl.fltime <= 0);
-          cout << "Input the flight number: ";
+          cout << "Nhap so hieu chuyen bay: ";
           cin.ignore();
           getline(cin, fl.flnum);
-          cout << "Input the destination: ";
+          cout << "Nhap ten san bay: ";
           getline(cin, fl.des);
-          cout << "Input the airline: ";
+          cout << "Nhap hang hang khong: ";
           getline(cin, fl.airman);
-          cout << "Input the destination country: ";
+          cout << "Nhap ten quoc gia den: ";
           getline(cin, fl.couname);
      }
      void Print(Flight fl)
